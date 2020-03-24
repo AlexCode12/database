@@ -25,7 +25,7 @@ public class Soloaventyr {
                 System.out.println(body);
             }
 
-            while (target_id != 87) {
+            while (target_id != 53) {
                 String strSelect2 = "select target_id, description from links where story_id = " + story_id;
                 ResultSet rset2 = stmt.executeQuery(strSelect2);
 
@@ -39,6 +39,11 @@ public class Soloaventyr {
                 target_id = in.nextInt();
                 story_id = target_id;
 
+                if (target_id >= 53) {
+                    System.out.println("Välj ett annat tal.");
+                    target_id = in.nextInt();
+                }
+                
                 String strSelect3 = "select body from story where id = " + target_id;
                 ResultSet rset3 = stmt.executeQuery(strSelect3);
 
