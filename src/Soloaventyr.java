@@ -1,6 +1,10 @@
 import java.sql.*;
 import java.util.Scanner;
 
+/*
+Har kvar denna fil tills VMC-versionen är klar. Just nu en work in progress.
+ */
+
 public class Soloaventyr {
     public static void main(String[] args) {
         try {
@@ -43,7 +47,7 @@ public class Soloaventyr {
                     System.out.println("Välj ett annat tal.");
                     target_id = in.nextInt();
                 }
-                
+
                 String strSelect3 = "select body from story where id = " + target_id;
                 ResultSet rset3 = stmt.executeQuery(strSelect3);
 
