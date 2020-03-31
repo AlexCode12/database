@@ -1,5 +1,5 @@
 
-public class SoloaventyrVMC {
+public class SoloaventyrMVC {
     public static void main(String[] args) {
     SoloaventyrView theView = new SoloaventyrView();
     SoloaventyrModel theModel = new SoloaventyrModel();

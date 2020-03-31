@@ -6,6 +6,7 @@
 // It performs no calculations, but instead passes
 // information entered by the user to whomever needs
 // it.
+import java.awt.*;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 public class SoloaventyrView extends JFrame {
@@ -14,7 +15,7 @@ public class SoloaventyrView extends JFrame {
     private JLabel secondAdditionLabel = new JLabel("+");
     private JTextField secondNumber = new JTextField(10);
     private JButton calculateButton = new JButton("GO!");
-    private JTextField calcSolution = new JTextField(10);
+
 
     SoloaventyrView() {
         // Sets up the view and adds the components
@@ -23,10 +24,9 @@ public class SoloaventyrView extends JFrame {
         this.setSize(600, 200);
         calcPanel.add(firstAdditionLabel);
         calcPanel.add(firstNumber);
-        calcPanel.add(secondNumber);
         calcPanel.add(secondAdditionLabel);
+        calcPanel.add(secondNumber);
         calcPanel.add(calculateButton);
-        calcPanel.add(calcSolution);
         this.add(calcPanel);
         // End of setting up the components --------
     }
@@ -37,14 +37,6 @@ public class SoloaventyrView extends JFrame {
 
     public int getSecondNumber() {
         return Integer.parseInt(secondNumber.getText());
-    }
-
-    public int getCalcSolution() {
-        return Integer.parseInt(calcSolution.getText());
-    }
-
-    public void setCalcSolution(int solution) {
-        calcSolution.setText(Integer.toString(solution));
     }
 
     // If the calculateButton is clicked execute a method
